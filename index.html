@@ -23,8 +23,25 @@
         }
 
     </style>
+
+    <script>
+        function updateIframeURL() {
+            // Get the parameter value from the URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var paramValue = urlParams.get('city');
+      
+            // Get the iframe and update the src attribute
+            var iframe = document.getElementById('myIframe');
+            iframe.src = 'https://mc78m9n2j8v0ylqf2-1ymhlncsq4.pub.sfmc-content.com/zdn5upuscy0?city=' + paramValue;
+          }
+      
+          // Add an event listener to the window load event
+          window.onload = function() {
+            updateIframeURL();
+          };
+    </script>
 </head>
 <body>
-    <iframe style="height:100%; width:100%;" src="https://mc78m9n2j8v0ylqf2-1ymhlncsq4.pub.sfmc-content.com/zdn5upuscy0?city=gurgaon"></iframe>
+    <iframe id="myIframe" style="height:100%; width:100%;" src="https://mc78m9n2j8v0ylqf2-1ymhlncsq4.pub.sfmc-content.com/zdn5upuscy0"></iframe>
 </body>
 </html>
